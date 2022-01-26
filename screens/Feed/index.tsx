@@ -55,7 +55,7 @@ const Feed: React.FC<Props> = ({ navigation }) => {
             );
           }}
           onEndReachedThreshold={0.5}
-          onEndReached={fetchMore}
+          onEndReached={() => !loading && fetchMore()}
           onRefresh={refresh}
         />
       )}
