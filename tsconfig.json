@@ -12,9 +12,11 @@
       "screens": ["./screens"],
       "components": ["./components"],
       "navigation": ["./navigation"],
-      "navigation/*": [".//navigation/*"],
+      "navigation/*": ["./navigation/*"],
       "hooks": ["./hooks"],
-      "config": ["./config"]
+      "config": ["./config"],
+      "modules": ["./modules"],
+      "modules/*": ["./modules/*"]
     }
   },
   "extends": "expo/tsconfig.base"

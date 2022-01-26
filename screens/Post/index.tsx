@@ -4,7 +4,8 @@ import styled from 'styled-components/native';
 
 import { Screen, Image } from 'components';
 import { RootStackParamList, Routes } from 'navigation/types';
-import films from '../data';
+
+import { useFilm } from './hooks';
 
 type Props = NativeStackScreenProps<RootStackParamList, Routes.post>;
 
@@ -36,7 +37,8 @@ const Post: React.FC<Props> = ({
     params: { id },
   },
 }) => {
-  const film = films.find(v => v.id === id)!;
+  const film = useFilm(id);
+
   return (
     <Screen paddingHorizontal={8}>
       <StyledContainer>

@@ -9,7 +9,7 @@ type CardProps = {
   title: string;
   subtitle1: string;
   subtitle2: string;
-  onPress: () => void;
+  onPress?: () => void;
   loading?: boolean;
   marginTop?: number;
 };
